@@ -21,7 +21,7 @@ function build_one
 	--enable-cross-compile \
 	--sysroot=$SYSROOT \
 	--target-os=linux \
-	--extra-cflags="-Os -fpic" \
+	--extra-cflags="-Os -fpic -fPIE -pie" \
 	--disable-debug \
 	$ADDITIONAL_CONFIGURE_FLAG
 	make clean

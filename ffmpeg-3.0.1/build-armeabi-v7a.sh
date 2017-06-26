@@ -18,8 +18,8 @@ function build_one
 	--enable-cross-compile \
 	--sysroot=$SYSROOT \
 	--target-os=linux \
-	--extra-cflags="-Os -fpic -marm" \
-	--extra-ldflags="-marm" \
+	--extra-cflags="-Os -fpic -marm -fPIE -pie" \
+	--extra-ldflags="-marm -fPIE -pie" \
     --disable-debug \
 	$ADDITIONAL_CONFIGURE_FLAG
 	make clean
