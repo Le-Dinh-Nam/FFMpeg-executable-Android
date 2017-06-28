@@ -22,6 +22,7 @@ function build_one
 	--sysroot=$SYSROOT \
 	--target-os=linux \
 	--extra-cflags="-Os -fpic -fPIE -pie" \
+	--extra-ldflags="-fPIE -pie" \
 	--disable-debug \
 	$ADDITIONAL_CONFIGURE_FLAG
 	make clean
