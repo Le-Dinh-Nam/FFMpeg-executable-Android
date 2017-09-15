@@ -14,6 +14,7 @@ function build_one
 	--disable-ffprobe \
 	--disable-ffserver \
 	--arch=arm \
+	--cpu=armv7-a \
 	--cross-prefix=$TOOLCHAIN/bin/arm-linux-androideabi- \
 	--enable-cross-compile \
 	--sysroot=$SYSROOT \
