@@ -1,0 +1,98 @@
+checking for -Werror=unknown-warning-option... no
+Failed commandline was:
+--------------------------------------------------
+/Users/nam/Android/android-ndk-r15c/toolchains/x86-4.9/prebuilt/darwin-x86_64/bin/i686-linux-android-gcc conftest.c  -Wall -I. -I$(SRCPATH) --sysroot=/Users/nam/Android/android-ndk-r15c/platforms/android-16/arch-x86/  -Werror=unknown-warning-option   --sysroot=/Users/nam/Android/android-ndk-r15c/platforms/android-16/arch-x86/ -o conftest
+cc1: error: -Werror=unknown-warning-option: no option -Wunknown-warning-option
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+int main (void) {  return 0; }
+--------------------------------------------------
+x264 configure script
+Command line options: "--prefix=./android/x86" "--enable-static" "--enable-pic" "--host=i686-linux" "--cross-prefix=/Users/nam/Android/android-ndk-r15c/toolchains/x86-4.9/prebuilt/darwin-x86_64/bin/i686-linux-android-" "--sysroot=/Users/nam/Android/android-ndk-r15c/platforms/android-16/arch-x86/" "--disable-asm" "--disable-cli" "--disable-win32thread" "--disable-debug"
+
+checking whether /Users/nam/Android/android-ndk-r15c/toolchains/x86-4.9/prebuilt/darwin-x86_64/bin/i686-linux-android-gcc works... yes
+checking whether /Users/nam/Android/android-ndk-r15c/toolchains/x86-4.9/prebuilt/darwin-x86_64/bin/i686-linux-android-gcc supports for( int i = 0; i < 9; i++ ); with -std=gnu99... yes
+checking for -mpreferred-stack-boundary=6... yes
+checking for pthread_create(0,0,0,0); in pthread.h... no
+Failed commandline was:
+--------------------------------------------------
+/Users/nam/Android/android-ndk-r15c/toolchains/x86-4.9/prebuilt/darwin-x86_64/bin/i686-linux-android-gcc conftest.c -m32  -Wall -I. -I$(SRCPATH) --sysroot=/Users/nam/Android/android-ndk-r15c/platforms/android-16/arch-x86/ -std=gnu99 -D_GNU_SOURCE -mpreferred-stack-boundary=6  -lpthread  -m32  --sysroot=/Users/nam/Android/android-ndk-r15c/platforms/android-16/arch-x86/ -lm -o conftest
+/Users/nam/Android/android-ndk-r15c/toolchains/x86-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/i686-linux-android/4.9.x/../../../../i686-linux-android/bin/ld: error: cannot find -lpthread
+collect2: error: ld returned 1 exit status
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <pthread.h>
+int main (void) { pthread_create(0,0,0,0); return 0; }
+--------------------------------------------------
+checking for pthread_create(0,0,0,0); in pthread.h... yes
+checking for cpu_set_t p_aff; return CPU_COUNT(&p_aff); in sched.h... no
+Failed commandline was:
+--------------------------------------------------
+/Users/nam/Android/android-ndk-r15c/toolchains/x86-4.9/prebuilt/darwin-x86_64/bin/i686-linux-android-gcc conftest.c -m32  -Wall -I. -I$(SRCPATH) --sysroot=/Users/nam/Android/android-ndk-r15c/platforms/android-16/arch-x86/ -std=gnu99 -D_GNU_SOURCE -mpreferred-stack-boundary=6  -D_GNU_SOURCE -Werror  -m32  --sysroot=/Users/nam/Android/android-ndk-r15c/platforms/android-16/arch-x86/ -lm  -o conftest
+conftest.c: In function 'main':
+conftest.c:2:19: error: unknown type name 'cpu_set_t'
+ int main (void) { cpu_set_t p_aff; return CPU_COUNT(&p_aff); return 0; }
+                   ^
+conftest.c:2:1: error: implicit declaration of function 'CPU_COUNT' [-Werror=implicit-function-declaration]
+ int main (void) { cpu_set_t p_aff; return CPU_COUNT(&p_aff); return 0; }
+ ^
+cc1: all warnings being treated as errors
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <sched.h>
+int main (void) { cpu_set_t p_aff; return CPU_COUNT(&p_aff); return 0; }
+--------------------------------------------------
+checking for return log2f(2); in math.h... no
+Failed commandline was:
+--------------------------------------------------
+/Users/nam/Android/android-ndk-r15c/toolchains/x86-4.9/prebuilt/darwin-x86_64/bin/i686-linux-android-gcc conftest.c -m32  -Wall -I. -I$(SRCPATH) --sysroot=/Users/nam/Android/android-ndk-r15c/platforms/android-16/arch-x86/ -std=gnu99 -D_GNU_SOURCE -mpreferred-stack-boundary=6  -Werror  -m32  --sysroot=/Users/nam/Android/android-ndk-r15c/platforms/android-16/arch-x86/ -lm  -o conftest
+conftest.c: In function 'main':
+conftest.c:2:1: error: implicit declaration of function 'log2f' [-Werror=implicit-function-declaration]
+ int main (void) { return log2f(2); return 0; }
+ ^
+conftest.c:2:26: error: incompatible implicit declaration of built-in function 'log2f' [-Werror]
+ int main (void) { return log2f(2); return 0; }
+                          ^
+cc1: all warnings being treated as errors
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <math.h>
+int main (void) { return log2f(2); return 0; }
+--------------------------------------------------
+checking whether defined(MAP_PRIVATE) is true... yes
+checking for MADV_HUGEPAGE; in sys/mman.h... yes
+checking for uint32_t test_vec __attribute__ ((vector_size (16))) = {0,1,2,3}; in stdint.h... yes
+checking for stdio.h... yes
+checking for -fno-tree-vectorize... yes
+checking for fseeko(stdin,0,0); in stdio.h... yes
+checking for -Wshadow... yes
+checking for -Wmaybe-uninitialized... yes
+
+platform:      X86
+byte order:    little-endian
+system:        LINUX
+cli:           no
+libx264:       internal
+shared:        no
+static:        yes
+asm:           no
+interlaced:    yes
+avs:           no
+lavf:          no
+ffms:          no
+mp4:           no
+gpl:           yes
+thread:        posix
+opencl:        yes
+filters:       crop select_every 
+lto:           no
+debug:         no
+gprof:         no
+strip:         no
+PIC:           yes
+bit depth:     8
+chroma format: all
